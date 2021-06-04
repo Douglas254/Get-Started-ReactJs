@@ -84,3 +84,50 @@ console.log(activeJobs);
  }
 
  doingWhat.digging();
+
+
+ // Arrray.map Method
+//  const colors = ['Red','Green','Blue'];
+//  const items = colors.map(function(color){
+//      return '<li>' + color + '<li>';
+//   });
+//   console.log(items);
+
+const colors = ['red','green','blue'];
+const items = colors.map(color => `<li> ${color} <li>`); // template literal i.e `<li>${color}<li>`
+console.log(items);
+
+//_____________________________________________________________________________________________________________________________
+
+// Object Destructuring
+const address = {
+    street: 'kibra',
+    city: '',
+    country: ''
+};
+
+const { street, city, country} = address;
+const { street: st } = address // setting alias st inplace of street
+console.log(st);
+
+
+// Spread Operator - they are represented using three dots i.e ...
+
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+// const combined = first.concat(second);
+const combined = [...first, 'a',...second, 'b'];
+console.log(combined);
+
+const clone = [...first];
+console.log(clone);
+
+const first1 = {name: 'Douglas', school: 'Kabarak University'};
+const second1 = {city: 'Nakuru', location: 'Kenya'};
+
+const combined1 = {...first1,...second1, department: 'Information Technology(IT)'};
+console.log(combined1);
+
+const clone1 = {...second1}
+console.log(clone1);
