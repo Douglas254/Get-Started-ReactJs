@@ -131,3 +131,47 @@ console.log(combined1);
 
 const clone1 = {...second1}
 console.log(clone1);
+
+// Classes - blueprint
+
+class Person2 {
+    constructor(name){
+        this.name = name;
+    }
+    
+    walk(){
+        console.log("walk");
+    }
+}
+
+const person2 = new Person2("Douglas");
+console.log(person2);
+
+person2.walk
+
+
+// Inheritance - inherits from the parent class using the extends Keyword
+
+class Person3 {
+    constructor(name){
+        this.name = name;
+    }
+
+    walk(){
+        console.log("Walk");
+    }
+}
+
+class Teacher extends Person3 {
+    constructor(name,degree){
+        super(name);
+        this.degree = degree;
+    }
+
+    teach(){
+        console.log("Teach")
+    }
+}
+
+const teacher = new Teacher('Douglas','BSc');
+console.log(teacher.degree);
